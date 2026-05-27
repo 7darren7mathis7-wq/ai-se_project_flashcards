@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+.header__title {
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: -0.24px;
+  margin: 0;
+}
+.nav__links {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav__link {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.nav__link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.header__link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

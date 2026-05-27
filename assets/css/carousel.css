@@ -1,0 +1,92 @@
+.carousel {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel__controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.carousel__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #1a1a1a80;
+}
+
+.carousel__back-btn {
+  background: none;
+  border: none;
+  color: #1a1a1a;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.carousel__back-btn:hover {
+  text-decoration: underline;
+}
+
+.carousel__card-text {
+  height: 300px;
+  width: 440px;
+  padding: 20px;
+  background-color: #64d583;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.carousel__btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 10px;
+  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel__btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel__btn_type_left::before,
+.carousel__btn_type_right::before,
+.carousel__btn_type_flip::before {
+  display: none;
+}
+
+.carousel__btn_disabled {
+  opacity: 0.5;
+}
+
+.carousel__btn_disabled:hover {
+  cursor: default;
+}
