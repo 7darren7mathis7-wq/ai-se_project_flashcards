@@ -11,6 +11,6 @@ Here is a [link](https://7darren7mathis7-wq.github.io/ai-se_project_flashcards/#
 1. Html
 2. JavaScript
 3. CSS
-4.
+
 
 ## Features
