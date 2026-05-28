@@ -4,7 +4,9 @@
 
 @import url(../css/header-nav.css);
 
-@import url(../css/decks.css);
+@import url(../css/card.css);
+
+@import url(../css/gallery.css);
 
 @import url(../css/carousel.css);
 

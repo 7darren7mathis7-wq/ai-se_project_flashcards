@@ -1,0 +1,49 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.gallery__title {
+  margin: 0 0 40px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  display: contents;
+  margin: 0;
+  gap: 20px;
+  padding: 0;
+}
+
+.gallery__new-card-btn {
+  background-color: #d9d9d9;
+  height: 205px;
+  width: 325px;
+  padding: 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #1a1a1a80;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+
+.gallery__new-card-btn:hover {
+  background-color: #c5c5c5;
+  color: #1a1a1a;
+  cursor: pointer;
+}

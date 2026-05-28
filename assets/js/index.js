@@ -6,56 +6,56 @@ const homeSection = document.querySelector("#home");
 const carouselSection = document.querySelector("#carousel");
 const aboutSection = document.querySelector("#about");
 const notFoundSection = document.querySelector("#not-found");
-const deckContainerEl = document.querySelector(".decks__list");
+const galleryContainerEl = document.querySelector(".gallery__list");
 const deckTemplateEl = document.querySelector("#deck-template");
 
-function clearDeckList() {
-  deckContainerEl.replaceChildren();
+function clearGalleryList() {
+  galleryContainerEl.replaceChildren();
 }
 
-function getDeckColorClass(color) {
+function getCardColorClass(color) {
   const colorName = hexToString(color) || "green";
-  return `deck_color_${colorName}`;
+  return `card_color_${colorName}`;
 }
 
 // --- REQUIRED FUNCTIONS FOR STEP 2 ---
 
 /**
- * Creates, clones, and customizes the deck element
+ * Creates, clones, and customizes the card element
  */
-function createDeckEl(deck) {
-  const deckEl = deckTemplateEl.content.querySelector(".deck").cloneNode(true);
+function createCardEl(deck) {
+  const cardEl = deckTemplateEl.content.querySelector(".card").cloneNode(true);
 
-  const deckTitleEl = deckEl.querySelector(".deck__title");
-  const deckCountEl = deckEl.querySelector(".deck__count");
-  const deckLinkEl = deckEl.querySelector(".deck__link");
-  const deleteBtn = deckEl.querySelector(".deck__delete-btn");
+  const cardTitleEl = cardEl.querySelector(".card__title");
+  const cardCountEl = cardEl.querySelector(".card__count");
+  const cardLinkEl = cardEl.querySelector(".card__link");
+  const deleteBtn = cardEl.querySelector(".card__delete-btn");
 
-  deckTitleEl.textContent = deck.name;
-  deckCountEl.textContent = `${deck.cards.length} cards`;
-  deckLinkEl.href = `#carousel/${deck.id}`;
+  cardTitleEl.textContent = deck.name;
+  cardCountEl.textContent = `${deck.cards.length} cards`;
+  cardLinkEl.href = `#carousel/${deck.id}`;
 
-  removeColorClasses(deckEl);
-  deckEl.classList.add(getDeckColorClass(deck.color));
+  removeColorClasses(cardEl);
+  cardEl.classList.add(getCardColorClass(deck.color));
 
   deleteBtn.onclick = (event) => {
     event.stopPropagation();
     const deckIndex = decks.findIndex((deckItem) => deckItem.id === deck.id);
     if (deckIndex > -1) {
       decks.splice(deckIndex, 1);
-      deckEl.remove(); // Efficiently removes just this element
+      cardEl.remove(); // Efficiently removes just this element
     }
   };
 
-  return deckEl;
+  return cardEl;
 }
 
 /**
- * Uses createDeckEl to get an element and prepends it to the list
+ * Uses createCardEl to get an element and prepends it to the list
  */
-function renderDeckEl(deck) {
-  const deckEl = createDeckEl(deck);
-  deckContainerEl.prepend(deckEl);
+function renderCardEl(deck) {
+  const cardEl = createCardEl(deck);
+  galleryContainerEl.prepend(cardEl);
 }
 
 // --- VIEW RENDERING FUNCTIONS ---
@@ -69,10 +69,10 @@ function renderHomeView() {
   // Remove carousel-specific class when on home
   document.body.classList.remove("page__main-content_location_carousel");
 
-  clearDeckList();
+  clearGalleryList();
 
-  // Pass renderDeckEl as a callback
-  decks.forEach(renderDeckEl);
+  // Pass renderCardEl as a callback
+  decks.forEach(renderCardEl);
 }
 
 function renderAboutView() {
