@@ -89,3 +89,12 @@
 .carousel__btn_disabled:hover {
   cursor: default;
 }
+
+.carousel__back-btn {
+  align-self: flex-start;
+  font-weight: bold;
+}
+
+.carousel__card-text--flipped {
+  background-color: white !important;
+}

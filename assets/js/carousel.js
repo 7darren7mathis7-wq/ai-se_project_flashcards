@@ -53,6 +53,13 @@ export function renderCarouselView(deck) {
     // Make sure this matches the CSS names above!
     cardTextEl.classList.add(`carousel__card_color_${colorName}`);
 
+    // 4. Add white background when showing answer
+    if (isFlipped) {
+      cardTextEl.classList.add("carousel__card-text--flipped");
+    } else {
+      cardTextEl.classList.remove("carousel__card-text--flipped");
+    }
+
     updateArrows();
   }
   updateDisplay();
@@ -79,6 +86,6 @@ export function renderCarouselView(deck) {
   };
 
   backBtn.onclick = () => {
-    window.location.hash = "#home";
+    window.location.hash = `#flashcard-view/${deck.id}`;
   };
 }

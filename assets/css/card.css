@@ -85,3 +85,7 @@
 .card__delete-btn:hover {
   opacity: 100%;
 }
+
+.card--flipped {
+  background-color: white !important;
+}

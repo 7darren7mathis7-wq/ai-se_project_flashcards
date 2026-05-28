@@ -68,8 +68,46 @@
         </div>
       </section>
 
+      <section id="flashcard-view" class="gallery" style="display: none">
+        <div class="flashcard-view-header">
+          <h2 class="gallery__title"></h2>
+          <button class="flashcard-practice-btn" type="button">Practice</button>
+        </div>
+        <div class="gallery__container">
+          <ul class="gallery__list"></ul>
+          <template id="flashcard-template">
+            <li class="card">
+              <h3 class="card__title"></h3>
+              <div class="card__row">
+                <button
+                  aria-label="Flip Card"
+                  class="flashcard-flip-btn"
+                  type="button"
+                >
+                  <img src="./assets/images/flip.svg" alt="flip card" />
+                </button>
+                <button
+                  class="card__delete-btn"
+                  type="button"
+                  aria-label="Delete Deck"
+                >
+                  <img src="./assets/images/delete.svg" alt="delete button" />
+                </button>
+              </div>
+            </li>
+          </template>
+          <button
+            class="gallery__new-card-btn"
+            type="button"
+            aria-label="Add New Deck"
+          >
+            + New Deck
+          </button>
+        </div>
+      </section>
+
       <section id="carousel" class="carousel" style="display: none">
-        <button class="carousel__back-btn" type="button">Back to Decks</button>
+        <button class="carousel__back-btn" type="button">Back to Deck</button>
         <h2 class="carousel__title">Deck Name &middot; 1/10</h2>
         <div class="carousel__card">
           <div class="carousel__controls">
