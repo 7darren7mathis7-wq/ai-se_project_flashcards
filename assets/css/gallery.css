@@ -47,3 +47,24 @@
   color: #1a1a1a;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .gallery__title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .gallery__container {
+    gap: 16px;
+  }
+
+  .gallery__list {
+    gap: 16px;
+  }
+
+  .gallery__new-card-btn {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 325 / 205;
+  }
+}

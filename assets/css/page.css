@@ -21,3 +21,18 @@
 .page__main-content_location_carousel {
   margin-top: 106px;
 }
+
+@media (max-width: 768px) {
+  .page {
+    padding: 16px;
+  }
+
+  .page__main-content {
+    padding-top: 32px;
+    margin-bottom: 80px;
+  }
+
+  .page__main-content_location_carousel {
+    margin-top: 60px;
+  }
+}
