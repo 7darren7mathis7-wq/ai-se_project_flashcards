@@ -1,6 +1,7 @@
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
+    flex-direction: row;
+
     gap: 16px;
   }
 
@@ -75,13 +76,8 @@
     z-index: 5;
   }
 
-  .flashcard-view-header {
-    position: sticky;
-    top: 0;
-    background-color: #ececec;
-    z-index: 10;
-    padding: 16px 0;
-    margin-bottom: 0;
+  .flashcard-view__title {
+    display: none;
   }
 
   .flashcard-view-header .gallery__title {
@@ -92,22 +88,15 @@
     display: none;
   }
 
-  .flashcard-view-footer {
+  .flashcard-view__footer-btns {
     position: fixed;
     bottom: 32px;
     left: 16px;
     right: 16px;
-    display: flex !important;
+    display: flex;
     gap: 16px;
-    z-index: 100;
+    z-index: 10;
     padding: 80px 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(236, 236, 236, 0) 0%,
-      rgba(236, 236, 236, 1) 50%,
-      rgba(236, 236, 236, 0) 100%
-    );
-    pointer-events: none;
   }
 
   .flashcard-view-footer .flashcard-practice-btn,

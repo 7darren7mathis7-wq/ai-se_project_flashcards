@@ -8,6 +8,8 @@
 
 .carousel__card {
   display: flex;
+  height: 255px;
+  width: 353px;
   flex-direction: column;
   align-items: center;
   gap: 20px;
@@ -45,8 +47,6 @@
 }
 
 .carousel__card-text {
-  height: 420px;
-  width: 353px;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -54,6 +54,12 @@
   border-radius: 20px;
   font-weight: 700;
   font-size: 32px;
+  box-shadow:
+    0px 2px 8px 0px #0000001a,
+    -1px 2px 2px 0px #ffffffb2 inset,
+    1px -1px 2px 0px #00000040 inset;
+  height: 255px;
+  width: 353px;
 }
 
 .carousel__btn {
@@ -67,14 +73,18 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-shadow:
+    0px 2px 8px 0px #0000001a,
+    -1px 2px 2px 0px #ffffffb2 inset,
+    1px -1px 2px 0px #00000040 inset;
 }
 
-.carousel__btn img {
+/* .carousel__btn img {
   width: 24px;
   height: 24px;
   object-fit: contain;
   display: block;
-}
+} */
 
 .carousel__btn_type_left::before,
 .carousel__btn_type_right::before,
@@ -92,7 +102,7 @@
 
 .carousel__back-btn {
   align-self: flex-start;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .carousel__card-text--flipped {
