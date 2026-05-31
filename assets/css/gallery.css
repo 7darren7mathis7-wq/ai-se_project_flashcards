@@ -48,23 +48,27 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .gallery__title {
-    font-size: 28px;
-    margin-bottom: 24px;
-  }
+#flashcard-view .gallery__new-card-btn {
+  display: none;
+}
 
-  .gallery__container {
-    gap: 16px;
-  }
+.flashcard-view-new-card-btn {
+  background-color: #cccccc;
+  height: 205px;
+  width: 325px;
+  padding: 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #1a1a1a80;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
 
-  .gallery__list {
-    gap: 16px;
-  }
-
-  .gallery__new-card-btn {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 325 / 205;
-  }
+.flashcard-view-new-card-btn:hover {
+  background-color: #4fb86b;
+  color: #1a1a1a;
+  cursor: pointer;
 }

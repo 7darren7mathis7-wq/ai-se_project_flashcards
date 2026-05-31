@@ -1,0 +1,201 @@
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav__links {
+    gap: 16px;
+  }
+
+  .page__main-content {
+    padding-top: 32px;
+    margin-bottom: 80px;
+  }
+
+  .page {
+    padding-bottom: 0;
+  }
+
+  .page__main-content_location_carousel {
+    margin-top: 60px;
+  }
+
+  .gallery__title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .gallery__container {
+    gap: 16px;
+  }
+
+  .gallery__list {
+    gap: 16px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 325 / 205;
+  }
+
+  #home .gallery__new-card-btn {
+    position: fixed;
+    bottom: 80px;
+    left: 16px;
+    right: 16px;
+    width: calc(100% - 32px);
+    height: 56px;
+    aspect-ratio: auto;
+    background-color: black;
+    justify-content: center;
+    font-weight: 700;
+    z-index: 100;
+    color: white;
+  }
+
+  #flashcard-view .gallery__new-card-btn {
+    display: none;
+  }
+
+  .flashcard-view-new-card-btn {
+    display: none;
+  }
+
+  .gallery__new-card-btn:hover {
+    background: linear-gradient(
+      to top,
+      rgba(236, 236, 236, 1) 35%,
+      rgba(236, 236, 236, 0) 100%
+    );
+  }
+
+  .card__delete-btn {
+    z-index: 5;
+  }
+
+  .flashcard-view-header {
+    position: sticky;
+    top: 0;
+    background-color: #ececec;
+    z-index: 10;
+    padding: 16px 0;
+    margin-bottom: 0;
+  }
+
+  .flashcard-view-header .gallery__title {
+    margin-bottom: 0;
+  }
+
+  .flashcard-view-header .flashcard-practice-btn {
+    display: none;
+  }
+
+  .flashcard-view-footer {
+    position: fixed;
+    bottom: 32px;
+    left: 16px;
+    right: 16px;
+    display: flex !important;
+    gap: 16px;
+    z-index: 100;
+    padding: 80px 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(236, 236, 236, 0) 0%,
+      rgba(236, 236, 236, 1) 50%,
+      rgba(236, 236, 236, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  .flashcard-view-footer .flashcard-practice-btn,
+  .flashcard-view-footer .flashcard-new-card-btn {
+    display: flex !important;
+    pointer-events: auto;
+  }
+
+  .flashcard-new-card-btn {
+    flex: 1;
+    height: 56px;
+    background-color: #cccccc;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: flex;
+  }
+
+  .flashcard-practice-btn {
+    flex: 1;
+    height: 56px;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: flex;
+  }
+
+  .carousel {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .carousel__card {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 353 / 420;
+  }
+
+  .carousel__controls {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .carousel__btn {
+    width: 100%;
+  }
+
+  .carousel__btn_type_left,
+  .carousel__btn_type_right {
+    flex: 1;
+  }
+
+  .carousel__btn_type_flip {
+    flex: 0 0 auto;
+  }
+
+  .carousel__card-text {
+    width: 100%;
+    height: 100%;
+  }
+
+  #carousel .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .page::after {
+    height: 200px;
+  }
+}

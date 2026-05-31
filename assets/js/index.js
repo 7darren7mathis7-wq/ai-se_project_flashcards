@@ -155,13 +155,13 @@ function router() {
 window.addEventListener("DOMContentLoaded", () => {
   router();
 
-  const practiceBtn = document.querySelector(".flashcard-practice-btn");
-  if (practiceBtn) {
+  const practiceBtns = document.querySelectorAll(".flashcard-practice-btn");
+  practiceBtns.forEach((practiceBtn) => {
     practiceBtn.onclick = () => {
       if (currentDeck) {
         window.location.hash = `#carousel/${currentDeck.id}`;
       }
     };
-  }
+  });
 });
 window.addEventListener("hashchange", router);

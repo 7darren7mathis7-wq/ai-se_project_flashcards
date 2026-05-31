@@ -40,14 +40,3 @@
   cursor: pointer;
   text-decoration: underline;
 }
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .nav__links {
-    gap: 16px;
-  }
-}

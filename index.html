@@ -75,6 +75,12 @@
         </div>
         <div class="gallery__container">
           <ul class="gallery__list"></ul>
+          <button class="flashcard-view-new-card-btn" type="button">+ New Card</button>
+        </div>
+        <div class="flashcard-view-footer">
+          <button class="flashcard-new-card-btn" type="button">+ New Card</button>
+          <button class="flashcard-practice-btn" type="button">Practice</button>
+        </div>
           <template id="flashcard-template">
             <li class="card">
               <h3 class="card__title"></h3>
@@ -110,6 +116,7 @@
         <button class="carousel__back-btn" type="button">Back to Deck</button>
         <h2 class="carousel__title">Deck Name &middot; 1/10</h2>
         <div class="carousel__card">
+          <div class="carousel__card-text">Question</div>
           <div class="carousel__controls">
             <button
               aria-label="Go to previous card"
@@ -119,7 +126,13 @@
             >
               <img src="./assets/images/left.svg" alt="Previous card" />
             </button>
-            <div class="carousel__card-text">Question</div>
+            <button
+              type="button"
+              aria-label="Flip Card"
+              class="carousel__btn_type_flip carousel__btn"
+            >
+              <img src="./assets/images/flip.svg" alt="Flip card" />
+            </button>
             <button
               type="button"
               aria-label="Go to Next"
@@ -128,13 +141,6 @@
               <img src="./assets/images/right.svg" alt="Next card" />
             </button>
           </div>
-          <button
-            type="button"
-            aria-label="Flip Card"
-            class="carousel__btn_type_flip carousel__btn"
-          >
-            <img src="./assets/images/flip.svg" alt="Flip card" />
-          </button>
         </div>
       </section>
 
