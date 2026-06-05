@@ -31,8 +31,7 @@
   background-color: #d9d9d9;
   height: 205px;
   width: 325px;
-  padding: 20px;
-  border-radius: 20px;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
@@ -40,6 +39,8 @@
   border: none;
   cursor: pointer;
   display: flex;
+  padding: 12px;
+  border-radius: 8px;
 }
 
 .gallery__new-card-btn:hover {
@@ -47,12 +48,11 @@
   color: #1a1a1a;
   cursor: pointer;
 }
-
 #flashcard-view .gallery__new-card-btn {
   display: none;
 }
 
-.flashcard-view-new-card-btn {
+.flashcard-new-card-btn {
   background-color: #cccccc;
   height: 205px;
   width: 325px;
@@ -67,7 +67,7 @@
   display: flex;
 }
 
-.flashcard-view-new-card-btn:hover {
+.flashcard-new-card-btn:hover {
   background-color: #4fb86b;
   color: #1a1a1a;
   cursor: pointer;

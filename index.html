@@ -116,31 +116,61 @@
         <button class="carousel__back-btn" type="button">Back to Deck</button>
         <h2 class="carousel__title">Deck Name &middot; 1/10</h2>
         <div class="carousel__card">
-          <div class="carousel__card-text">Question</div>
-          <div class="carousel__controls">
-            <button
+          <div class="carousel__card-row">
+             <button
               aria-label="Go to previous card"
-              class="carousel__btn_type_left carousel__btn carousel__btn_disabled"
+              class="carousel__btn_type_left carousel__hidden-left-btn carousel__btn carousel__btn_disabled"
               type="button"
               disabled
-            >
-              <img src="./assets/images/left.svg" alt="Previous card" />
+            > <img src="./assets/images/left.svg" alt="Previous card" />
             </button>
+            <div class="carousel__card-text">Question</div>
+<button
+              type="button"
+              aria-label="Go to Next"
+              class="carousel__btn_type_right carousel__hidden-right-btn carousel__btn"
+            >
+              <img src="./assets/images/right.svg" alt="Next card" />
+            </button>
+          </div>
+          <div class="carousel__flip-btn">
+                   
+           
+             
             <button
               type="button"
               aria-label="Flip Card"
-              class="carousel__btn_type_flip carousel__btn"
+              class="carousel__btn_type_flip carousel__hidden-flip-btn carousel__btn"
+            >
+              <img src="./assets/images/flip.svg" alt="Flip card" />
+            </button>
+            
+          </div>
+<div class="carousel__mobile-view">
+   <button
+              aria-label="Go to previous card"
+              class="carousel__mobile-btn-left carousel__btn_type_left carousel__btn carousel__btn_disabled"
+              type="button"
+              disabled
+            > <img src="./assets/images/left.svg" alt="Previous card" />
+            </button>
+             <button
+              type="button"
+              aria-label="Flip Card"
+              class="carousel__mobile-btn-flip carousel__btn_type_flip carousel__btn"
             >
               <img src="./assets/images/flip.svg" alt="Flip card" />
             </button>
             <button
               type="button"
               aria-label="Go to Next"
-              class="carousel__btn_type_right carousel__btn"
+              class="carousel__mobile-btn-right carousel__btn_type_right carousel__btn"
             >
               <img src="./assets/images/right.svg" alt="Next card" />
             </button>
-          </div>
+
+
+</div>
         </div>
       </section>
 

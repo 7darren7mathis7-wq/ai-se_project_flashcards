@@ -8,14 +8,20 @@
 
 .carousel__card {
   display: flex;
-  height: 255px;
-  width: 353px;
+
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.carousel__controls {
+.carousel__card-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel__flip-btn {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -62,6 +68,10 @@
   width: 353px;
 }
 
+.carousel__mobile-view {
+  display: none;
+}
+
 .carousel__btn {
   width: 44px;
   height: 44px;
@@ -78,13 +88,6 @@
     -1px 2px 2px 0px #ffffffb2 inset,
     1px -1px 2px 0px #00000040 inset;
 }
-
-/* .carousel__btn img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  display: block;
-} */
 
 .carousel__btn_type_left::before,
 .carousel__btn_type_right::before,
