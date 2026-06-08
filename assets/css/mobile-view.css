@@ -22,10 +22,7 @@
     padding-bottom: 40px;
   }
 
-  .page__main-content_location_carousel {
-    margin-top: 60px;
-  }
-
+  
   .gallery__title {
     font-size: 28px;
     margin-bottom: 24px;
@@ -58,6 +55,8 @@
     font-weight: 700;
     z-index: 100;
     color: white;
+    padding: 18px;
+    font-size: 16px;
   }
 
   .flashcard-view__footer-btns {
@@ -146,7 +145,7 @@
 
   .carousel__card-text{
    
-    width: 100%;
+    text-align: center;
     height: 420px;
     max-width: 353px;
   }
