@@ -157,7 +157,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 1;
   }
 
   .footer {
@@ -171,6 +171,10 @@
 
   #carousel .footer {
     padding-bottom: 40px;
+  }
+
+  .carousel__btn {
+    z-index: 20;
   }
 
   .carousel__mobile-view {

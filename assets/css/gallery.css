@@ -39,8 +39,8 @@
   border: none;
   cursor: pointer;
   display: flex;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .gallery__new-card-btn:hover {
