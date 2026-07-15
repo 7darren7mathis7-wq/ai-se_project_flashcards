@@ -12,6 +12,11 @@ const aboutSection = document.querySelector("#about");
 const notFoundSection = document.querySelector("#not-found");
 const galleryContainerEl = document.querySelector(".gallery__list");
 const deckTemplateEl = document.querySelector("#deck-template");
+const newDeckView = document.querySelector("#new-deck-view");
+const newDeckButton = document.querySelector(".gallery__new-card-btn");
+const newDeckForm = document.querySelector("#new-deck-form");
+const newDeckSubmitBtn = document.querySelector(".new-deck-view__submit-btn");
+const newDeckTextArea = document.querySelector("#flashcard-text");
 
 function clearGalleryList() {
   galleryContainerEl.replaceChildren();
@@ -70,6 +75,7 @@ function renderHomeView() {
   flashcardViewSection.style.display = "none";
   aboutSection.style.display = "none";
   notFoundSection.style.display = "none";
+  newDeckView.style.display = "none";
 
   // Remove carousel-specific class when on home
   document.body.classList.remove("page__main-content_location_carousel");
@@ -86,6 +92,7 @@ function renderAboutView() {
   flashcardViewSection.style.display = "none";
   aboutSection.style.display = "block";
   notFoundSection.style.display = "none";
+  newDeckView.style.display = "none";
   document.body.classList.remove("page__main-content_location_carousel");
 }
 
@@ -95,6 +102,17 @@ function renderNotFoundView() {
   flashcardViewSection.style.display = "none";
   aboutSection.style.display = "none";
   notFoundSection.style.display = "block";
+  newDeckView.style.display = "none";
+  document.body.classList.remove("page__main-content_location_carousel");
+}
+
+function renderNewDeckView() {
+  homeSection.style.display = "none";
+  carouselSection.style.display = "none";
+  flashcardViewSection.style.display = "none";
+  aboutSection.style.display = "none";
+  notFoundSection.style.display = "none";
+  newDeckView.style.display = "block";
   document.body.classList.remove("page__main-content_location_carousel");
 }
 
@@ -107,6 +125,8 @@ function router() {
     renderHomeView();
   } else if (hash === "about") {
     renderAboutView();
+  } else if (hash === "new-deck") {
+    renderNewDeckView();
   } else if (hash.startsWith("flashcard-view/")) {
     const deckId = hash.split("/")[1];
     const deck = decks.find((deckItem) => deckItem.id === deckId);
@@ -152,8 +172,33 @@ function router() {
   }
 }
 
+function updateNewDeckSubmitState() {
+  if (newDeckSubmitBtn && newDeckTextArea) {
+    const hasText = newDeckTextArea.value.trim().length > 0;
+    newDeckSubmitBtn.disabled = !hasText;
+  }
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   router();
+
+  if (newDeckButton) {
+    newDeckButton.addEventListener("click", () => {
+      window.location.hash = "#new-deck";
+    });
+  }
+
+  if (newDeckForm) {
+    newDeckForm.addEventListener("submit", () => {
+      window.location.hash = "#home";
+    });
+  }
+
+  if (newDeckTextArea) {
+    newDeckTextArea.addEventListener("input", updateNewDeckSubmitState);
+  }
+
+  updateNewDeckSubmitState();
 
   const practiceBtns = document.querySelectorAll(".flashcard-practice-btn");
   practiceBtns.forEach((practiceBtn) => {

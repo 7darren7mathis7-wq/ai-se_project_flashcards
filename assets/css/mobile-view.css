@@ -195,6 +195,24 @@
     display: none;
   }
 
+#new-deck-view .new-deck-view__form {
+    
+    max-width: 100%;
+  }
+
+  #new-deck-view .new-deck-view__title {
+   font-size: 32px;
+  }
+
+  #new-deck-view .new-deck-view__submit-btn {
+    width: 100%;
+    
+  }
+
+
+
+
+
 body.page:not(.page__main-content_location_carousel)::after {
   content: ""; /* Needed to make the pseudo-element render */
   position: fixed; /* Locks it to the viewport screen */
